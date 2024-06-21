@@ -5,7 +5,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer.
 export default function App() {
   return (
     <div className="App">
-      <Navbar logoName = "Lima"/>
+      <Navbar logoName = "lima"/>
       <ItemListContainer greeting="PIN PERSONALIZADO"/>
     </div>
   );

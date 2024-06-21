@@ -7,10 +7,10 @@ export default function Navbar({logoName}) {
         <nav className="Menu">
             <h1>{logoName}</h1>
             <ul className="menu-Ul">
-                <li>Produtos</li>
-                <li>Sobre</li>
-                <CartWidget/>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Sobre</a></li>
             </ul>
+            <CartWidget/>
         </nav>
     </div>)
 }
