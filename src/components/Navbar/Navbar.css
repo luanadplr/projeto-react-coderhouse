@@ -1,0 +1,17 @@
+.Menu{
+    background-color: gainsboro;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+ul{
+    display: flex;
+}
+
+li{
+    list-style-type: none;
+    margin: 10px 15px 10px 15px;
+
+}
+

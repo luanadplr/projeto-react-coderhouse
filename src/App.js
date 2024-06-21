@@ -1,23 +1,12 @@
 import './App.css';
+import Navbar from "./components/Navbar/Navbar.jsx"
+import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx'
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar logoName = "Lima"/>
+      <ItemListContainer greeting="PIN PERSONALIZADO"/>
     </div>
   );
 }
-
-export default App;
