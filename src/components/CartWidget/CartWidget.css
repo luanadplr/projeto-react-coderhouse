@@ -1,0 +1,8 @@
+.valorCarrinho{
+    background-color: red;
+    border-radius: 100%;
+    padding: 5px;
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+}

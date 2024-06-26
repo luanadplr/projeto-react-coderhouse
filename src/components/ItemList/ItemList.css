@@ -1,0 +1,24 @@
+.itemList{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    width: 50%;
+    margin: 10px;
+}
+
+.addRemove{
+    border: none;
+    padding: 5px 10px;
+    margin: 10px 20px;
+}
+
+#adicionarCarrinho{
+    padding: 9px;
+    background-color: white;
+    border: thin solid black;
+    border-radius: 100px;
+}
+
+#adicionarCarrinho:hover{
+    background-color: rgb(236, 236, 236);
+}
