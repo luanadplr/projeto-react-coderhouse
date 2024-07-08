@@ -1,0 +1,15 @@
+
+.itemBase{
+    background-color: rgb(197, 197, 197);
+    margin: 0 20px;
+    padding: 20px;
+}
+
+.nomeProduto{
+    font-weight: 700;
+}
+
+.Stock{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.575);
+}

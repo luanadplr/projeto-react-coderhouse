@@ -1,0 +1,19 @@
+
+.Navbar, .Navbar_Links{
+    display: flex;
+    padding: 20px 50px;
+}
+
+.Navbar{
+    justify-content: space-between;
+    align-items: center;
+}
+
+li{
+    list-style-type: none;
+    padding: 0 10px;
+}
+
+.Link{
+    text-decoration: none;
+}
