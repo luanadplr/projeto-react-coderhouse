@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import Item from "../Item/Item"
-import "./ItemList.css"
 
 export default function ItemList(){
 
@@ -27,10 +26,17 @@ export default function ItemList(){
             })
     },[])
 
+    const estiloLista = {
+        display: "flex"
+    }
+
     return(
-        <div className="listaProdutos">
+        <div style={estiloLista}>
             {produtos.map((produto=>
-                <Item key={produto.id} nome={produto.nome} stock={produto.stock} id={produto.id}/>
+                <Item key={produto.id} 
+                    nome={produto.nome} 
+                    stock={produto.stock} 
+                    id={produto.id}/>
             ))}
         </div>
     )

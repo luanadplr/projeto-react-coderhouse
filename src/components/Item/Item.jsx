@@ -1,15 +1,16 @@
 import "./Item.css"
 import { NavLink } from "react-router-dom"
 
-export default function Item({nome, stock, id}){
+export default function Item({nome, stock, id, img}){
     return(
         <div className="itemBase">
-            <div>
-                <p className="nomeProduto">{nome}</p>
-                <p className="Stock">Somente {stock} disponíveis</p>
-                <NavLink to={`/produto/${id}`}>
-                    <button>Ver detalhes</button>
+            <div className="cadaItem">
+                <div className="testeImagem"></div>
+                <NavLink to={`/produto/${id}`} style={{textDecoration: "none"}}>
+                    <p className="nomeProduto">{nome}</p>
                 </NavLink>
+                <p className="Stock">Somente {stock} disponíveis</p>
+                <p className="precoProduto">R$0,00</p>
             </div>
         </div>
     )

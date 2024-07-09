@@ -1,0 +1,43 @@
+.bannerProdutos{
+    background-image: url("../../img/imgs/mamamooot4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20em;
+}
+
+.txtProdutos{
+    background-color: rgba(0, 0, 0, 0.34);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 100px;
+    color: white;
+    height: 20em;
+}
+
+h2{
+    letter-spacing: 4px;
+    margin-bottom: 7px;
+}
+
+.txtDescricao{
+    width: 500px;
+}
+
+.listagemProdutos{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.txtCategoria{
+    opacity: 0.6;
+}
+
+.tituloProdutos{
+    font-size: 12px;
+    border-top: 1px solid rgba(0, 0, 0, 0.221);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.221);
+    margin: 40px 90px 20px 90px;
+    width: 800px;
+}

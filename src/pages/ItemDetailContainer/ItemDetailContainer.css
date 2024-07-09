@@ -1,0 +1,14 @@
+.informacoesProduto{
+    display: flex;
+    justify-content: center;
+}
+
+.testeImagemDois{
+    background-color: grey;
+    height: 30em;
+    width: 35em;
+}
+
+.infosProdutos{
+    padding: 20px;
+}

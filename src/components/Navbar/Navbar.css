@@ -1,19 +1,39 @@
 
-.Navbar, .Navbar_Links{
+.Navbar, .Navbar_Links, .Navbar_Logo{
     display: flex;
-    padding: 20px 50px;
 }
 
 .Navbar{
+    flex-flow: column;
+    background-color: white;
+}
+
+.logoTitulo{
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+    letter-spacing: 7px;
+}
+
+.Navbar_Logo{
     justify-content: space-between;
-    align-items: center;
+    padding: 50px 90px 30px 90px;
+}
+
+.Navbar_Links{
+    padding: 0 0 30px 90px;
 }
 
 li{
     list-style-type: none;
-    padding: 0 10px;
+    padding-right: 30px;
 }
 
 .Link{
     text-decoration: none;
+    color: black;
+}
+
+.menuLink:hover{
+    border-bottom: 5px solid rgb(240, 97, 121);
 }
