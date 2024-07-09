@@ -11,7 +11,6 @@ export default function ItemDetailContainer(){
     const [contador, useContador] = useState(1)
 
     function addProduto() { useContador(contador+1) }
-
     function removeProduto() { 
         if (contador > 0) useContador(contador-1)
     }
@@ -34,15 +33,17 @@ export default function ItemDetailContainer(){
                     <div className="testeImagemDois"></div>
                 </div>
                 <div className="infosProdutos">
-                    <ItemCount 
-                        contador = {contador} 
-                        add = {addProduto} 
-                        remove = {removeProduto}/>
-                    <button>Adicionar ao Carrinho</button>
+                    <h3 className="nome_Produto">Nome do Produto</h3>
+                    <h2 className="preco_Produto">R$ 0,00</h2>
+                    <div className="quantidade_Produto">
+                        <p style={{fontSize: "12px", opacity: 0.7}}>Quantidade</p>
+                        <ItemCount 
+                            contador = {contador} 
+                            add = {addProduto} 
+                            remove = {removeProduto}/>
+                    </div>
+                    <button className="btn_AdicionarCarrinho">Adicionar ao Carrinho</button>
                 </div>
-            </div>
-            <div className="detalhesProduto">
-                <h2>Detalhes</h2>
             </div>
         </div>
     )

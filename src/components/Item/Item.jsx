@@ -1,7 +1,7 @@
 import "./Item.css"
 import { NavLink } from "react-router-dom"
 
-export default function Item({nome, stock, id, img}){
+export default function Item({nome, stock, id}){
     return(
         <div className="itemBase">
             <div className="cadaItem">

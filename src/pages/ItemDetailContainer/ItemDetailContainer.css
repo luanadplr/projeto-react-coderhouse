@@ -1,3 +1,4 @@
+
 .informacoesProduto{
     display: flex;
     justify-content: center;
@@ -11,4 +12,26 @@
 
 .infosProdutos{
     padding: 20px;
+}
+
+.quantidade_Produto{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
+    border-top: thin solid rgba(0, 0, 0, 0.607);
+    padding-top: 20px;
+}
+
+.btn_AdicionarCarrinho{
+    width: 100%;
+    padding: 20px 50px;
+    background-color: rgb(240, 97, 121);
+    color: white;
+    border:none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: "Red Hat Display", sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
 }

@@ -1,30 +1,7 @@
 import { useEffect, useState } from "react"
 import Item from "../Item/Item"
 
-export default function ItemList(){
-
-    const [produtos, setProdutos] = useState([])
-
-    function minhaPromise(){
-        return new Promise((resolve, reject)=>{
-            setTimeout(()=>{
-                resolve([
-                    {id: 1, nome: "Yellow Flower", stock: 2},
-                    {id: 2, nome: "Red Moon", stock: 3},
-                    {id: 3, nome: "Blue;s", stock: 5},
-                    {id: 4, nome: "White Wind", stock: 6}
-                ])
-            },1000)
-        })
-    }
-
-    useEffect(()=>{
-        minhaPromise()
-            .then(sucesso => {
-                const totalProdutos = sucesso.map((produtos)=> produtos)
-                setProdutos(totalProdutos)
-            })
-    },[])
+export default function ItemList({produtos}){
 
     const estiloLista = {
         display: "flex"
