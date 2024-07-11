@@ -8,11 +8,11 @@ export default function ItemDetailContainer(){
     // Funções para o adicionar e remover
     // a quantidade de itens no contador do Item Count
 
-    const [contador, useContador] = useState(1)
+    const [contador, setContador] = useState(1)
 
-    function addProduto() { useContador(contador+1) }
+    function addProduto() { setContador(contador+1) }
     function removeProduto() { 
-        if (contador > 0) useContador(contador-1)
+        if (contador > 0) setContador(contador-1)
     }
 
     return(
