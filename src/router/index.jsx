@@ -7,7 +7,8 @@ export default function Router(){
     return(
         <Routes>
             <Route exact path="/" element={<Main/>}/>
-            <Route exact path="/produtos" element={<ItemListContainer/>}/>
+            {/*<Route exact path="/produtos" element={<ItemListContainer/>}/>*/}
+            <Route exact path="/produtos/:category" element={<ItemListContainer/>}/>
             <Route exact path="/produto/:id" element={<ItemDetailContainer/>}/>
         </Routes>
     )

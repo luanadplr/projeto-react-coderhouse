@@ -16,6 +16,7 @@
 }
 
 .tituloCategoria{
+    text-transform: uppercase;
     letter-spacing: 4px;
     margin-bottom: 7px;
 }

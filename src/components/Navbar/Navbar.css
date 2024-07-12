@@ -35,5 +35,9 @@ li{
 }
 
 .menuLink:hover{
+    border-bottom: 2px solid rgb(240, 97, 121);
+}
+
+.menuAtivo{
     border-bottom: 5px solid rgb(240, 97, 121);
 }

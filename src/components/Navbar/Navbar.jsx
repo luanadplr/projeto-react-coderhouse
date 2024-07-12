@@ -11,11 +11,26 @@ export default function Navbar(){
             </div>
             <div>
                 <ul className="Navbar_Links">
-                    <li><Link to={"/produtos"} className="Link menuLink">GRUPO</Link></li>
-                    <li><Link to={"/produtos"} className="Link menuLink">SOLAR</Link></li>
-                    <li><Link to={"/produtos"} className="Link menuLink">MOONBYUL</Link></li>
-                    <li><Link to={"/produtos"} className="Link menuLink">WHEEIN</Link></li>
-                    <li><Link to={"/produtos"} className="Link menuLink">HWASA</Link></li>
+                    <li><NavLink to={"/produtos/MAMAMOO"} 
+                        className={({ isActive }) =>
+                            isActive ? "Link menuLink menuAtivo" : "Link menuLink"
+                        }>GRUPO</NavLink></li>
+                    <li><NavLink to={"/produtos/solar"} 
+                        className={({ isActive }) =>
+                            isActive ? "Link menuLink menuAtivo" : "Link menuLink"
+                        }>SOLAR</NavLink></li>
+                    <li><NavLink to={"/produtos/moonbyul"} 
+                        className={({ isActive }) =>
+                            isActive ? "Link menuLink menuAtivo" : "Link menuLink"
+                        }>MOONBYUL</NavLink></li>
+                    <li><NavLink to={"/produtos/wheein"} 
+                        className={({ isActive }) =>
+                            isActive ? "Link menuLink menuAtivo" : "Link menuLink"
+                        }>WHEEIN</NavLink></li>
+                    <li><NavLink to={"/produtos/hwasa"} 
+                        className={({ isActive }) =>
+                            isActive ? "Link menuLink menuAtivo" : "Link menuLink"
+                        }>HWASA</NavLink></li>
                 </ul>
             </div>
         </div>
