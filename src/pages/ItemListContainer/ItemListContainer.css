@@ -1,5 +1,4 @@
 .bannerProdutos{
-    background-image: url("../../img/imgs/mamamooot4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 20em;
@@ -33,6 +32,7 @@
 
 .txtCategoria{
     opacity: 0.6;
+    text-transform: uppercase;
 }
 
 .tituloProdutos{
