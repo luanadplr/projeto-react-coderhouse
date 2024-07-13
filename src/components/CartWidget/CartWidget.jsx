@@ -1,4 +1,5 @@
 import FeatherIcon from "feather-icons-react"
+import { NavLink } from "react-router-dom"
 
 export default function CartWidget(){
     const estiloSpan = {
@@ -10,8 +11,10 @@ export default function CartWidget(){
     }
     return(
         <div>
-            <FeatherIcon icon="shopping-cart"/>
-            <span style={estiloSpan}>0</span>
+            <NavLink to={"/carrinho"} style={{textDecoration: "none", color: "black"}}>
+                <FeatherIcon icon="shopping-cart"/>
+                <span style={estiloSpan}>0</span>
+            </NavLink>
         </div>
     )
 }

@@ -1,4 +1,5 @@
-export default function ItemCount({contador, add, remove}){
+
+export default function ItemCount({contador, add, remove, stock}){
 
     const styleBotao = {
         background: "none",
@@ -20,6 +21,9 @@ export default function ItemCount({contador, add, remove}){
     if (contador == 1) {
         styleBotaoDiminuir.cursor = "not-allowed"
         styleBotaoDiminuir.color = "grey"
+    } if (contador == stock) {
+        styleBotao.cursor = "not-allowed"
+        styleBotao.color = "grey"
     }
 
     const styleContador = {
