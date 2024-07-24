@@ -1,4 +1,4 @@
-# Projeto e-commerce: BELISMOO
+# BELISMOO
 
 Projeto criado para o curso de React JS da Coderhouse
 
