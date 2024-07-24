@@ -1,5 +1,9 @@
+import { useContext } from "react"
+import { CartContext } from "../../context/CartContext"
 
-export default function ItemCount({contador, add, remove, stock}){
+export default function ItemCount({stock}){
+
+    const {contador, addContador, removeContador} = useContext(CartContext)
 
     const styleBotao = {
         background: "none",
@@ -37,9 +41,9 @@ export default function ItemCount({contador, add, remove, stock}){
 
     return(
         <div className="divContador" style={styleDivContador}>
-            <button onClick={remove} className="btn" style={styleBotaoDiminuir}>-</button>
+            <button onClick={removeContador} className="btn" style={styleBotaoDiminuir}>-</button>
             <span className="contador" style={styleContador}>{contador}</span>
-            <button onClick={add} className="btn btnSoma" style={styleBotao}>+</button>
+            <button onClick={addContador} className="btn btnSoma" style={styleBotao}>+</button>
         </div>
     )
 }

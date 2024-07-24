@@ -1,20 +1,12 @@
-import { useState } from "react"
 import ItemCount from "../../components/ItemCount/ItemCount"
 import { Link, useLocation } from "react-router-dom"
 import "./ItemDetailContainer.css"
+import { useContext } from "react"
+import { CartContext } from "../../context/CartContext"
 
 export default function ItemDetailContainer(){
 
-    // Funções para o adicionar e remover
-    // a quantidade de itens no contador do Item Count
-
-    const [contador, setContador] = useState(1)
-
-    function addProduto() { 
-        if (contador < stockProduto) setContador(contador+1) }
-    function removeProduto() { 
-        if (contador > 0) setContador(contador-1)
-    }
+    const {modificarCarrinho} = useContext(CartContext)
 
     // Pegar os props passados pelo NavLink
 
@@ -44,13 +36,9 @@ export default function ItemDetailContainer(){
                     <h2 className="preco_Produto">R$ 0,00</h2>
                     <div className="quantidade_Produto">
                         <p style={{fontSize: "12px", opacity: 0.7}}>Quantidade</p>
-                        <ItemCount 
-                            contador = {contador} 
-                            add = {addProduto} 
-                            remove = {removeProduto}
-                            stock = {stockProduto}/>
+                        <ItemCount stock = {stockProduto}/>
                     </div>
-                    <button className="btn_AdicionarCarrinho">Adicionar ao Carrinho</button>
+                    <button onClick={modificarCarrinho} className="btn_AdicionarCarrinho">Adicionar ao Carrinho</button>
                 </div>
             </div>
         </div>
