@@ -24,10 +24,16 @@
     width: 500px;
 }
 
+.produtosLista{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
 .listagemProdutos{
     display: flex;
     flex-flow: column wrap;
-    align-items: center;
+    width: 50%;
 }
 
 .txtCategoria{

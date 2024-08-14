@@ -8,19 +8,19 @@ export default function ItemDetailContainer(){
 
     const {modificarCarrinho} = useContext(CartContext)
 
-    // Pegar os props passados pelo NavLink
-
+// PEGAR OS PROPS PASSADOS POR NAVLINK
     let location = useLocation()
     const {nomeProduto} = location.state
     const {stockProduto} = location.state
     const {precoProduto} = location.state
-
+    const {categoriaProduto} = location.state
+//
     return(
         <div>
-            <div className="listagemProdutos">
+            <div className="produtosLista">
                 <h3 className="tituloProdutos">
                     <span className="txtCategoria">
-                        <Link to={"/produtos"}
+                        <Link to={`/produtos/${categoriaProduto}`}
                             style={{
                                 textDecoration: "none",
                                 color: "black"}}>VOLTAR → 

@@ -23,7 +23,7 @@ export default function ItemCount({stock}){
         color: "black"
     }
 
-    if (contador == 1) {
+    if (contador == 0 || contador == 1) {
         styleBotaoDiminuir.cursor = "not-allowed"
         styleBotaoDiminuir.color = "grey"
     } if (contador == stock) {

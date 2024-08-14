@@ -85,9 +85,11 @@ export default function ItemListContainer(){
                     <p className="txtDescricao">{categorias.map(descricao => descricao.description)}</p>
                 </div>
             </div>
-            <div className="listagemProdutos">
+            <div className="produtosLista">
                 <h3 className="tituloProdutos"><span className="txtCategoria">{category} → </span> TODOS OS PRODUTOS</h3>
-                <div><ItemList produtos={produtos} category={category}/></div>
+                <div className="listagemProdutos">
+                    <div><ItemList produtos={produtos} category={category}/></div>
+                </div>
             </div>
         </div>
     )

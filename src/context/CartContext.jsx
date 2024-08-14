@@ -13,10 +13,18 @@ export const CartProvider = ({children}) =>{
   let [countCarrinho, setCountCarrinho] = useState(0)
   function modificarCarrinho() {
     setCountCarrinho(countCarrinho = contador + countCarrinho)
+    setContador(0)
+  }
+
+  // FUNÇÃO PARA ENVIAR O ITEM AO CARRINHO
+  const [cart, setCart] = useState([])
+  function addItem(){
+    setCart([...cart])
+    console.log(cart)
   }
 
   return(
-    <CartContext.Provider value={{contador, stock, setStock, addContador, removeContador, modificarCarrinho, countCarrinho}}>
+    <CartContext.Provider value={{contador, stock, setStock, addContador, removeContador, modificarCarrinho, countCarrinho, addItem, cart}}>
       {children}
     </CartContext.Provider>
   )
