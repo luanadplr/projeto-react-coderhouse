@@ -26,6 +26,12 @@ const produtosMamamoo = [
     {id: 8, nome: "Melting", estoque: 2, idCategory: "MAMAMOO", preco: 220}
 ]
 
+const produtosWheein = [
+  {id: 1, nome: "Redd", estoque: 3, idCategory: "wheein", preco: 190},
+  {id: 2, nome: "WHEE", estoque: 55, idCategory: "wheein", preco: 160},
+  {id: 3, nome: "IN the mood", estoque: 120, idCategory: "wheein", preco: 160}
+]
+
 // ADICIONAR ITENS A COLEÇÃO DO FIRESTORE
 // //  produtosMamamoo.forEach(async(obj) => {
 // //      const docRef = await addDoc(collection(db, "mamamoo"), obj)
@@ -39,8 +45,8 @@ const produtosMamamoo = [
 // //   snapshot.forEach((item) => console.log("Item ", item.id, " -> ", item.data()))
 // // })
 
-const poucoEstoque = query(collection(db, "mamamoo"), where("estoque", "<", "10"))
-getDocs(poucoEstoque).then((snapshot)=>{
-  if(snapshot.size === 0) console.log("No")
+// const poucoEstoque = query(collection(db, "mamamoo"), where("estoque", "<", "10"))
+// getDocs(poucoEstoque).then((snapshot)=>{
+//   if(snapshot.size === 0) console.log("No")
   
-})
+// })

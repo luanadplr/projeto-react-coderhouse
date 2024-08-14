@@ -3,7 +3,8 @@ import { CartContext } from "../../context/CartContext"
 
 export default function ItemCount({stock}){
 
-    const {contador, addContador, removeContador} = useContext(CartContext)
+    const {contador, addContador, removeContador, setStock} = useContext(CartContext)
+    setStock(stock)
 
     const styleBotao = {
         background: "none",

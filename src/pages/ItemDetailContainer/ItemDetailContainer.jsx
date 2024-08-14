@@ -13,6 +13,7 @@ export default function ItemDetailContainer(){
     let location = useLocation()
     const {nomeProduto} = location.state
     const {stockProduto} = location.state
+    const {precoProduto} = location.state
 
     return(
         <div>
@@ -33,7 +34,7 @@ export default function ItemDetailContainer(){
                 </div>
                 <div className="infosProdutos">
                     <h3 className="nome_Produto">{nomeProduto}</h3>
-                    <h2 className="preco_Produto">R$ 0,00</h2>
+                    <h2 className="preco_Produto">R$ {precoProduto}</h2>
                     <div className="quantidade_Produto">
                         <p style={{fontSize: "12px", opacity: 0.7}}>Quantidade</p>
                         <ItemCount stock = {stockProduto}/>

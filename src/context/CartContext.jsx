@@ -5,7 +5,8 @@ export const CartProvider = ({children}) =>{
 
   // FUNÇÕES PARA O (+) E (-) DO ITEM COUNT
   const [contador, setContador] = useState(0)
-  function addContador() { if (contador < 10) setContador(contador+1) } 
+  const [stock, setStock] = useState(0)
+  function addContador() { if (contador < stock ) setContador(contador+1) } 
   function removeContador() { if (contador > 0) setContador(contador-1) }
 
   // FUNÇÃO PARA ADICIONAR O VALOR AO WIDGET DE CARRINHO
@@ -15,7 +16,7 @@ export const CartProvider = ({children}) =>{
   }
 
   return(
-    <CartContext.Provider value={{contador, addContador, removeContador, modificarCarrinho, countCarrinho}}>
+    <CartContext.Provider value={{contador, stock, setStock, addContador, removeContador, modificarCarrinho, countCarrinho}}>
       {children}
     </CartContext.Provider>
   )

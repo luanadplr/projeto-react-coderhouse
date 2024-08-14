@@ -11,7 +11,7 @@ export default function Navbar(){
             </div>
             <div>
                 <ul className="Navbar_Links">
-                    <li><NavLink to={"/produtos/MAMAMOO"} 
+                    <li><NavLink to={"/produtos/mamamoo"} 
                         className={({ isActive }) =>
                             isActive ? "Link menuLink menuAtivo" : "Link menuLink"
                         }>GRUPO</NavLink></li>

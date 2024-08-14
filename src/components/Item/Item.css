@@ -6,7 +6,8 @@
 .nomeProduto{
     font-weight: 700;
     color: black;
-    border-bottom: 5px solid rgb(240, 97, 121);
+    border-bottom: 3px solid rgb(240, 97, 121);
+    display:inline;
 }
 
 .testeImagem{

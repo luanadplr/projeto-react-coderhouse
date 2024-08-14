@@ -7,31 +7,40 @@ import ImgSolar from "../../img/imgs/mamamoosolar.jpeg"
 import ImgMoonbyul from "../../img/imgs/mamamoomoonbyul.jpeg"
 import ImgWheein from "../../img/imgs/mamamoowheein.jpeg"
 import ImgHwasa from "../../img/imgs/mamamoohwasa.jpeg"
+import db from "../../services/firebase"
+import { collection, getDocs } from "firebase/firestore"
 
 export default function ItemListContainer(){
 
     const {category} = useParams()
     const [produtos, setProdutos] = useState([])
-    const [categorias, setCategorias] = useState([])
 
-    function minhaPromise(){
-        return new Promise((resolve, reject)=>{
-                resolve(
-                    [
-                    {id: 1, nome: "Yellow Flower", stock: 2, category: "MAMAMOO"},
-                    {id: 2, nome: "Red Moon", stock: 3, category: "wheein"},
-                    {id: 3, nome: "Blue;s", stock: 5, category: "solar"},
-                    {id: 4, nome: "White Wind", stock: 6, category: "moonbyul"},
-                    {id: 5, nome: "MARIA", stock: 2, category: "hwasa"}
-                ])
+    useEffect(()=>{
+        newPromise()
+            .then(sucesso=>{
+                const listaCategorias = sucesso.filter((categoria) => categoria.id_Category === category)
+                setCategorias(listaCategorias)
+            })
+
+        pegarProdutos()
+    },[category])
+//
+
+    const pegarProdutos = () => {
+        const colecaoProdutos = collection(db, `${category}`)
+        getDocs(colecaoProdutos).then((snapshot)=>{
+            setProdutos(snapshot.docs.map((doc)=>({...doc.data()})))
         })
     }
+
+// ADICIONAR A DESCRIÇÃO DE CADA CATEGORIA
+    const [categorias, setCategorias] = useState([])
 
     function newPromise(){
         return new Promise((resolve, reject) => {
             resolve([
                 {
-                    id_Category: "MAMAMOO",
+                    id_Category: "mamamoo",
                     description: "MAMAMOO (em coreano: hangul: 마마무) é um grupo feminino sul-coreano formado pela RBW Entertainment em 2014. O grupo é formado por quatro integrantes: Solar, Moonbyul, Wheein e Hwasa e teve sua estreia oficial em 18 de junho de 2014."
                 },
                 {
@@ -54,22 +63,7 @@ export default function ItemListContainer(){
         })
     }
 
-    useEffect(()=>{
-        minhaPromise()
-            .then(sucesso => {
-                let totalProdutos
-                if (category) { totalProdutos = sucesso.filter((produtos)=> produtos.category === category) }
-                else { totalProdutos = sucesso }
-                setProdutos(totalProdutos)
-            })
-
-        newPromise()
-            .then(sucesso=>{
-                const listaCategorias = sucesso.filter((categoria) => categoria.id_Category === category)
-                setCategorias(listaCategorias)
-            })
-    },[category])
-
+// MUDAR O BACKGROUND DO BANNER PRINCIPAL
     const backgroundStyle = {
         backgroundImage: `url(${ImgMAMAMOO})`
     }
@@ -81,6 +75,7 @@ export default function ItemListContainer(){
     } else if (category === "wheein") {
         backgroundStyle.backgroundImage = `url(${ImgWheein})`
     } else if (category === "hwasa") { backgroundStyle.backgroundImage = `url(${ImgHwasa})`}
+//
 
     return(
         <div>
@@ -92,7 +87,7 @@ export default function ItemListContainer(){
             </div>
             <div className="listagemProdutos">
                 <h3 className="tituloProdutos"><span className="txtCategoria">{category} → </span> TODOS OS PRODUTOS</h3>
-                <div><ItemList produtos={produtos}/></div>
+                <div><ItemList produtos={produtos} category={category}/></div>
             </div>
         </div>
     )
