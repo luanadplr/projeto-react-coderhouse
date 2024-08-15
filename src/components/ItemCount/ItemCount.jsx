@@ -31,19 +31,10 @@ export default function ItemCount({stock}){
         styleBotao.color = "grey"
     }
 
-    const styleContador = {
-        padding: "0 20px 0 20px"
-    }
-
-    const styleDivContador = {
-        border: "1px solid black",
-        padding: "5px 10px 5px 10px"
-    }
-
     return(
-        <div className="divContador" style={styleDivContador}>
+        <div className="count-divPrincipal">
             <button onClick={removeContador} className="btn" style={styleBotaoDiminuir}>-</button>
-            <span className="contador" style={styleContador}>{contador}</span>
+            <span className="count">{contador}</span>
             <button onClick={addContador} className="btn btnSoma" style={styleBotao}>+</button>
         </div>
     )

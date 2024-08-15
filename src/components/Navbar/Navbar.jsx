@@ -1,35 +1,35 @@
 import { NavLink, Link } from "react-router-dom"
-import  "./Navbar.css"
+//import  "./Navbar.css"
 import CartWidget from "../CartWidget/CartWidget"
 
 export default function Navbar(){
     return(
-        <div className="Navbar">
-            <div className="Navbar_Logo">
-                <Link to={"/"} className="Link logoTitulo">BELISMOO STORE</Link>
+        <div className="navbar-divPrincipal">
+            <div className="navbar-logo">
+                <Link to={"/"} className="navbar-logoTitulo">BELISMOO STORE</Link>
                 <CartWidget/>
             </div>
             <div>
-                <ul className="Navbar_Links">
+                <ul className="navbar-linkList">
                     <li><NavLink to={"/produtos/mamamoo"} 
                         className={({ isActive }) =>
-                            isActive ? "Link menuLink menuAtivo" : "Link menuLink"
+                            isActive ? "menuLink menuAtivo" : "menuLink"
                         }>GRUPO</NavLink></li>
                     <li><NavLink to={"/produtos/solar"} 
                         className={({ isActive }) =>
-                            isActive ? "Link menuLink menuAtivo" : "Link menuLink"
+                            isActive ? "menuLink menuAtivo" : "menuLink"
                         }>SOLAR</NavLink></li>
                     <li><NavLink to={"/produtos/moonbyul"} 
                         className={({ isActive }) =>
-                            isActive ? "Link menuLink menuAtivo" : "Link menuLink"
+                            isActive ? "menuLink menuAtivo" : "menuLink"
                         }>MOONBYUL</NavLink></li>
                     <li><NavLink to={"/produtos/wheein"} 
                         className={({ isActive }) =>
-                            isActive ? "Link menuLink menuAtivo" : "Link menuLink"
+                            isActive ? "menuLink menuAtivo" : "menuLink"
                         }>WHEEIN</NavLink></li>
                     <li><NavLink to={"/produtos/hwasa"} 
                         className={({ isActive }) =>
-                            isActive ? "Link menuLink menuAtivo" : "Link menuLink"
+                            isActive ? "menuLink menuAtivo" : "menuLink"
                         }>HWASA</NavLink></li>
                 </ul>
             </div>

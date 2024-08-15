@@ -1,6 +1,5 @@
 import ItemCount from "../../components/ItemCount/ItemCount"
 import { Link, useParams } from "react-router-dom"
-import "./ItemDetailContainer.css"
 import { useContext, useEffect, useState } from "react"
 import { CartContext } from "../../context/CartContext"
 import { doc, getDoc } from "firebase/firestore"
@@ -37,29 +36,25 @@ export default function ItemDetailContainer(){
 
     return(
         <div>
-            <div className="produtosLista">
-                <h3 className="tituloProdutos">
+            <div className="itemlistctn-produtosLista">
+                <h3 className="itemlistctn-produtoTitulo">
                     <span className="txtCategoria">
-                        <Link to={`/produtos/${category}`}
-                            style={{
-                                textDecoration: "none",
-                                color: "black"}}>VOLTAR →
-                        </Link>
+                        <Link to={`/produtos/${category}`}>VOLTAR →</Link>
                     </span> {produto.nome}
                 </h3>
             </div>
-            <div className="informacoesProduto">
-                <div className="imagemProduto">
-                    <div className="testeImagemDois"></div>
+            <div className="itemdetailctn-produtoInfo">
+                <div>
+                    <div className="teste"></div>
                 </div>
-                <div className="infosProdutos">
-                    <h3 className="nome_Produto">{produto.nome}</h3>
-                    <h2 className="preco_Produto">R$ {produto.preco}</h2>
-                    <div className="quantidade_Produto">
+                <div className="produtoInfo">
+                    <h3>{produto.nome}</h3>
+                    <h2>R$ {produto.preco}</h2>
+                    <div className="produtoQuantidade">
                         <p style={{fontSize: "12px", opacity: 0.7}}>Quantidade</p>
                         <ItemCount stock = {produto.estoque}/>
                     </div>
-                    <button onClick={addItem} className="btn_AdicionarCarrinho">Adicionar ao Carrinho</button>
+                    <button onClick={addItem} className="btn-addCarrinho">Adicionar ao Carrinho</button>
                 </div>
             </div>
         </div>

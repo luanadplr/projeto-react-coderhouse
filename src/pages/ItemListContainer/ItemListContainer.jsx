@@ -1,7 +1,6 @@
 import ItemList from "../../components/ItemList/ItemList"
 import { useState, useEffect, useContext } from "react"
 import { useParams } from "react-router-dom"
-import "./ItemListContainer.css"
 import ImgMAMAMOO from "../../img/imgs/mamamooot4.jpeg"
 import ImgSolar from "../../img/imgs/mamamoosolar.jpeg"
 import ImgMoonbyul from "../../img/imgs/mamamoomoonbyul.jpeg"
@@ -24,8 +23,8 @@ export default function ItemListContainer(){
 
         pegarProdutos()
     },[category])
-//
 
+// EXIBIR LISTA DE PRODUTOS DO FIRESTORE DE ACORDO COM A CATEGORIA
     const pegarProdutos = () => {
         const colecaoProdutos = collection(db, category)
         getDocs(colecaoProdutos).then((snapshot)=>{
@@ -75,19 +74,18 @@ export default function ItemListContainer(){
     } else if (category === "wheein") {
         backgroundStyle.backgroundImage = `url(${ImgWheein})`
     } else if (category === "hwasa") { backgroundStyle.backgroundImage = `url(${ImgHwasa})`}
-//
 
     return(
         <div>
-            <div style={backgroundStyle} className="bannerProdutos">
-                <div className="txtProdutos">
-                    <h2 className="tituloCategoria">{category}</h2>
-                    <p className="txtDescricao">{categorias.map(descricao => descricao.description)}</p>
+            <div style={backgroundStyle} className="itemlistctn-banner">
+                <div className="itemlistctn-bannerTextos">
+                    <h2 className="itemlistctn-txtCategoria">{category}</h2>
+                    <p className="itemlistctn-txtDescricao">{categorias.map(descricao => descricao.description)}</p>
                 </div>
             </div>
-            <div className="produtosLista">
-                <h3 className="tituloProdutos"><span className="txtCategoria">{category} → </span> TODOS OS PRODUTOS</h3>
-                <div className="listagemProdutos">
+            <div className="itemlistctn-produtosLista">
+                <h3 className="itemlistctn-produtoTitulo"><span className="txtCategoria">{category} → </span> TODOS OS PRODUTOS</h3>
+                <div className="itemlistctn-produtos">
                     <div><ItemList produtos={produtos} category={category}/></div>
                 </div>
             </div>

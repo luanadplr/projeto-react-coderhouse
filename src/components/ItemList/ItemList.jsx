@@ -1,16 +1,9 @@
-import { useEffect } from "react"
 import Item from "../Item/Item"
 
 export default function ItemList({produtos, category}){
-
-    const estiloLista = {
-        display: "flex",
-        flexFlow: "row wrap",
-        justifyContent: "center"
-    }
-
+    
     return(
-        <div style={estiloLista}>
+        <div className="itemlist-Style">
             {produtos.map((produto=>
                 <Item key={produto.id} 
                     nome={produto.nome} 

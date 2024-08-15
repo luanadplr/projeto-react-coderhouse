@@ -8,7 +8,7 @@ export default function Cart(){
         <div>
             {cart.map(produto => (
                     <div>
-                            <p>{produto.nome}</p>
+                            <p className="cart-nomeProduto">{produto.nome}</p>
                             <p>R$ {produto.preco}</p>
                             <p>Quantidade: {produto.quantidade}</p>
                     </div>
