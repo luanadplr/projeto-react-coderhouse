@@ -16,16 +16,26 @@ export const CartProvider = ({children}) =>{
     setContador(0)
   }
 
-  // FUNÇÃO PARA ENVIAR O ITEM AO CARRINHO
+  // FUNÇÃO PARA VERIFICAR E ENVIAR O ITEM AO CARRINHO
   const [cart, setCart] = useState([])
-  function adicionarItem(item){
-    setCart([...cart, item])
-    modificarCarrinho()
+
+  function isInCart(itemId){
+    return cart.some(item=>item.id===itemId)
   }
 
-  useEffect(()=>{
-    console.log(cart)
-  },[cart])
+  function adicionarItem(item){
+    if(isInCart(item.id)){
+      setCart(prevCart=>{
+        const atualizarCarrinho = prevCart.map(obj=>
+          obj.id === item.id ? { ...obj, quantidade: obj.quantidade + item.quantidade } : obj
+        )
+        return atualizarCarrinho
+      })
+    } else {
+      setCart([...cart, item])  
+    }
+    modificarCarrinho() 
+  }
 
 
   return(

@@ -7,13 +7,7 @@ export default function Item({nome, stock, id, category, preco}){
             <div className="cadaItem">
                 <div className="testeImagem"></div>
                 <NavLink to= {`/produto/${category}/${id}`}
-                    style={{textDecoration: "none"}}
-                    state={{
-                        nomeProduto: nome,
-                        stockProduto: stock,
-                        precoProduto: preco,
-                        categoriaProduto: category
-                    }}>
+                    style={{textDecoration: "none"}}>
                         <p className="nomeProduto">{nome}</p>
                 </NavLink>
                 <p className="Stock">Somente {stock} disponíveis</p>

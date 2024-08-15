@@ -7,7 +7,7 @@ export default function Cart(){
     return(
         <div>
             {cart.map(produto => (
-                    <div key={`cart-${produto.id}`}>
+                    <div>
                             <p>{produto.nome}</p>
                             <p>R$ {produto.preco}</p>
                             <p>Quantidade: {produto.quantidade}</p>
