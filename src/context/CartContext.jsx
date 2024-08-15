@@ -1,4 +1,4 @@
-import { createContext, useState } from "react"
+import { createContext, useEffect, useState } from "react"
 
 export const CartContext = createContext()
 export const CartProvider = ({children}) =>{
@@ -18,13 +18,18 @@ export const CartProvider = ({children}) =>{
 
   // FUNÇÃO PARA ENVIAR O ITEM AO CARRINHO
   const [cart, setCart] = useState([])
-  function addItem(){
-    setCart([...cart])
-    console.log(cart)
+  function adicionarItem(item){
+    setCart([...cart, item])
+    modificarCarrinho()
   }
 
+  useEffect(()=>{
+    console.log(cart)
+  },[cart])
+
+
   return(
-    <CartContext.Provider value={{contador, stock, setStock, addContador, removeContador, modificarCarrinho, countCarrinho, addItem, cart}}>
+    <CartContext.Provider value={{contador, stock, setStock, addContador, removeContador, countCarrinho, cart, adicionarItem}}>
       {children}
     </CartContext.Provider>
   )

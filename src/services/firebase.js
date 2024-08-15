@@ -16,20 +16,26 @@ const db = getFirestore(app)
 export default db
 
 const produtosMamamoo = [
-    {id: 1, nome: "Yellow Flower", estoque: 3, idCategory: "MAMAMOO", preco: 190},
-    {id: 2, nome: "Red Moon", estoque: 3, idCategory: "MAMAMOO", preco: 190},
-    {id: 3, nome: "Blue;s", estoque: 1, idCategory: "MAMAMOO", preco: 190},
-    {id: 4, nome: "White Wind", estoque: 1, idCategory: "MAMAMOO", preco: 185},
-    {id: 5, nome: "Reality In Black", estoque: 10, idCategory: "MAMAMOO", preco: 90},
-    {id: 6, nome: "WAW", estoque: 280, idCategory: "MAMAMOO", preco: 100},
-    {id: 7, nome: "MIC ON", estoque: 190, idCategory: "MAMAMOO", preco: 45},
-    {id: 8, nome: "Melting", estoque: 2, idCategory: "MAMAMOO", preco: 220}
+    {nome: "Yellow Flower", estoque: 3, idCategory: "MAMAMOO", preco: 190},
+    {nome: "Red Moon", estoque: 3, idCategory: "MAMAMOO", preco: 190},
+    {nome: "Blue;s", estoque: 1, idCategory: "MAMAMOO", preco: 190},
+    {nome: "White Wind", estoque: 1, idCategory: "MAMAMOO", preco: 185},
+    {nome: "Reality In Black", estoque: 10, idCategory: "MAMAMOO", preco: 90},
+    {nome: "WAW", estoque: 280, idCategory: "MAMAMOO", preco: 100},
+    {nome: "MIC ON", estoque: 190, idCategory: "MAMAMOO", preco: 45},
+    {nome: "Melting", estoque: 2, idCategory: "MAMAMOO", preco: 220}
 ]
 
 const produtosWheein = [
-  {id: 1, nome: "Redd", estoque: 3, idCategory: "wheein", preco: 190},
-  {id: 2, nome: "WHEE", estoque: 55, idCategory: "wheein", preco: 160},
-  {id: 3, nome: "IN the mood", estoque: 120, idCategory: "wheein", preco: 160}
+  {nome: "Redd", estoque: 3, idCategory: "wheein", preco: 190},
+  {nome: "WHEE", estoque: 55, idCategory: "wheein", preco: 160},
+  {nome: "IN the mood", estoque: 120, idCategory: "wheein", preco: 160}
+]
+
+const produtosHwasa = [
+  {nome: "Maria", estoque: 2, idCategory: "hwasa", preco: 220},
+  {nome: "Im a B***", estoque: 5, idCategory: "hwasa", preco: 220},
+  {nome: "Twit", estoque: 10, idCategory: "hwasa", preco: 190}
 ]
 
 // ADICIONAR ITENS A COLEÇÃO DO FIRESTORE

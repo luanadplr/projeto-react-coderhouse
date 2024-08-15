@@ -1,5 +1,5 @@
 import ItemList from "../../components/ItemList/ItemList"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import { useParams } from "react-router-dom"
 import "./ItemListContainer.css"
 import ImgMAMAMOO from "../../img/imgs/mamamooot4.jpeg"
@@ -7,8 +7,8 @@ import ImgSolar from "../../img/imgs/mamamoosolar.jpeg"
 import ImgMoonbyul from "../../img/imgs/mamamoomoonbyul.jpeg"
 import ImgWheein from "../../img/imgs/mamamoowheein.jpeg"
 import ImgHwasa from "../../img/imgs/mamamoohwasa.jpeg"
-import db from "../../services/firebase"
 import { collection, getDocs } from "firebase/firestore"
+import db from "../../services/firebase"
 
 export default function ItemListContainer(){
 
@@ -27,9 +27,9 @@ export default function ItemListContainer(){
 //
 
     const pegarProdutos = () => {
-        const colecaoProdutos = collection(db, `${category}`)
+        const colecaoProdutos = collection(db, category)
         getDocs(colecaoProdutos).then((snapshot)=>{
-            setProdutos(snapshot.docs.map((doc)=>({...doc.data()})))
+            setProdutos(snapshot.docs.map((doc)=>({id: doc.id, ...doc.data()})))
         })
     }
 
