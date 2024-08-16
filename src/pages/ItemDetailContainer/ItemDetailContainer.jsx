@@ -54,7 +54,7 @@ export default function ItemDetailContainer(){
                         <p style={{fontSize: "12px", opacity: 0.7}}>Quantidade</p>
                         <ItemCount stock = {produto.estoque}/>
                     </div>
-                    <button onClick={addItem} className="btn-addCarrinho">Adicionar ao Carrinho</button>
+                    <button onClick={addItem} className="button">Adicionar ao Carrinho</button>
                 </div>
             </div>
         </div>

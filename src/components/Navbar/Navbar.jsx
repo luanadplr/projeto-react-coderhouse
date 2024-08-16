@@ -1,12 +1,11 @@
 import { NavLink, Link } from "react-router-dom"
-//import  "./Navbar.css"
 import CartWidget from "../CartWidget/CartWidget"
 
 export default function Navbar(){
     return(
         <div className="navbar-divPrincipal">
             <div className="navbar-logo">
-                <Link to={"/"} className="navbar-logoTitulo">BELISMOO STORE</Link>
+                <Link to={"/"} className="h3">BELISMOO STORE</Link>
                 <CartWidget/>
             </div>
             <div>
