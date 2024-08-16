@@ -11,7 +11,8 @@
 .itemlist-Style,
 .cart-produto,
 .cart-produtoInfo,
-.cart{
+.cart,
+.footer{
     display: flex;
 }
 
@@ -100,6 +101,7 @@ li{
 .itemlistctn-produtosLista{
     flex-flow: column;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .itemlistctn-produtoTitulo{
@@ -260,4 +262,17 @@ li{
 .btn-order{
     margin-top: 20px;
     width: 20%;
+}
+
+/* FOOTER */
+
+.footer{
+    align-items: end;
+    background-color: rgba(128, 128, 128, 0.289);
+    height: 20em;
+    padding: 20px;
+}
+
+.footerp{
+    font-size: 12px;
 }

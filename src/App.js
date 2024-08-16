@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar/Navbar"
 import "./App.css"
 import { CartProvider } from "./context/CartContext"
 import db from "./services/firebase"
+import Footer from "./components/Footer/Footer"
 
 export default function App() {
   
@@ -13,6 +14,7 @@ export default function App() {
               <BrowserRouter>
                 <Navbar/>
                 <Router/>
+                <Footer/>
               </BrowserRouter>
             </CartProvider>
       </div>
