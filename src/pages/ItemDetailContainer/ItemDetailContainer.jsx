@@ -45,7 +45,9 @@ export default function ItemDetailContainer(){
             </div>
             <div className="itemdetailctn-produtoInfo">
                 <div>
-                    <div className="teste"></div>
+                    <div className="teste">
+                        <img src={produto.img} className="produtoImg-Details"/>
+                    </div>
                 </div>
                 <div className="produtoInfo">
                     <h3>{produto.nome}</h3>

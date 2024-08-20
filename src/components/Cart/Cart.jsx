@@ -12,7 +12,7 @@ export default function Cart(){
             {cart.map(produto => (
                 <div className="cart-produto">
                     <div className="cart-produtoInfo">
-                        <div className="testeImagem"></div>
+                        <div className="testeImagem"><img src={produto.img} className="itemImg"/></div>
                         <div className="cart-produtoDetails">
                             <h2 className="h2-cart">{produto.nome}</h2>
                             <p className="txtCategoria">{produto.idCategory}</p>

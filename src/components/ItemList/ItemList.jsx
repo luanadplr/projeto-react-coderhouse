@@ -10,7 +10,8 @@ export default function ItemList({produtos, category}){
                     stock={produto.estoque} 
                     id={produto.id}
                     preco={produto.preco}
-                    category={category}/>
+                    category={category}
+                    img={produto.img}/>
             ))}
         </div>
     )
